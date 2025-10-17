@@ -108,6 +108,8 @@ Statistically, every group is different than every group. With a low-value each 
 
 When I observed the inferential results, it gave me the P value from comparison between White and black. White and other, and other. For White black the P-value was so low 1.741e05 which showed that they are statistically different, but for the white vs others and black vs others the P-values were 0.2565 and 0.06299 which shows us that they are not statistically different. However, in the mastor branch, when doing the fisher test it showed us that all the values were statistically different
 
+You can mostly see that see that black and white are the ones with most difference, according to the p-values. it has a very low number of around 0.000017. More white people are for the capital punishments, while less black people are for the capital punishment. However, between white and other, the p-value is only 0.2565. This means that there really isn't a difference between the amount of people favor capital punishment for white and others. They both prefer capital punishment. Lastly, the p-value between black and others is 0.06299. This shows that they are also close. It is less than p-value of white and others, but it is significantly not different. Black people are more aginst capital punishment then others.
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
