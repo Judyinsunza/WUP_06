@@ -46,20 +46,8 @@ This problem was a categorical problem. We found out in the categorical of race,
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
-```{r}
-dd2 <- davisdata %>% group_by(class,Sex) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
 
-# the group_by followed by summarize(count=n())
-
-basicC <- ggplot(dd2,aes(x=class,y=count,fill=Sex))
-basicC + geom_bar(stat="identity",position="dodge")
-
-#Now for percentage plot
-
-basicCC <- ggplot(dd2,aes(x=class,y=prcnt*100,fill=Sex)) 
-basicCC + geom_bar(stat="identity", position = "dodge")
-```
 
 
 ```{r}
@@ -77,8 +65,8 @@ basicCC <- ggplot(dd3,aes(x=race,y=prcnt*100,fill=cappun))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+The white people are for it with 2 to 1. The black people are more aginst it, and other seem more for it.
 ## Now with LESS data (more variables give less data due to NA's) create the approate graphic displays to answer the question.
-
 
 
 
@@ -86,10 +74,12 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ```{r}
-table2 <- xtabs(~cappun + race, data=mydata)
-rowPerc(table2)
-colPerc(table2)
+table2 <- xtabs(~race+ cappun, data=mydata)
+
+
 ```
+
+The majority of white people favor capital punishment, with 67.75% supporting it. Black people only had 47.24% and other had a significant value of 61.25%. The majority of black people opposed capital punishment, with a value of 52.76%. White people only opposed it by 38.75%.
 
 Of the people who favor capital punishment, almost 80% of them are white people, black people made up 11.72% of the people who favored capital punishment 8.47% were other people. In the opposing side was 65.38%, which were white. Lastly, there were was 10.51% who were others. 
 
